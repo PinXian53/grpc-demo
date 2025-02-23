@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: grpc-client
+server:
+  port: 8080
+grpc:
+  client:
+    hello-service: # 自訂名稱，需要與 @GrpcClient 一致
+      address: static://localhost:9090
+      negotiation-type: plaintext # 可選，使用 PLAINTEXT 模式

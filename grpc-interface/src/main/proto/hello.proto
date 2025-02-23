@@ -3,11 +3,11 @@ syntax = "proto3";
 package com.pino.grpcclient;
 
 option java_multiple_files = true;
-option java_package = "net.devh.boot.grpc.examples.lib";
-option java_outer_classname = "HelloWorldProto";
+option java_package = "com.pino.grpcinterface.generated";
+option java_outer_classname = "HelloProto";
 
 // The greeting service definition.
-service MyService {
+service HelloService {
   // Sends a greeting
   rpc SayHello (HelloRequest) returns (HelloReply) {
   }
