@@ -7,6 +7,20 @@ RPC（Remote Procedure Call，遠端程序呼叫）是一種程式設計概念�
 (ref: https://grpc.io/docs/what-is-grpc/introduction/) <br/>
 
 ## 優缺點
+✅ 優點
+1. 高效的二進制通信：使用 Protocol Buffers（Protobuf） 作為序列化格式，比 JSON / XML 更小更快。
+2. 基於 HTTP/2：支援多路復用（Multiplexing），減少連接數，提高吞吐量。
+3. 支援多種語言：官方支援 C++, Java, Go, Python, Node.js 等多種語言，適合跨語言系統。
+4. 內建 Streaming：支援 Client-side、Server-side、Bidirectional 串流，適用於即時應用。
+5. 內建 TLS 安全性：支援 SSL/TLS 加密，提高安全性。
+6. 自動生成 Stub：基於 .proto 文件，自動生成客戶端和伺服器代碼，開發效率高。
+
+❌ 缺點
+1. 學習成本高：需要學習 Protobuf 和 HTTP/2，對新手來說比 RESTful API 複雜。
+2. 調試困難：二進位格式（Protobuf）不易閱讀，相比 JSON 更難直接檢查請求/回應。
+3. 與瀏覽器兼容性差：瀏覽器原生不支援 gRPC，需要 gRPC-Web 代理。
+4. 對於簡單應用過於複雜：如果只是簡單的 CRUD 操作，REST API 更直觀易用。
+5. 生態系統相對較小：相較於 REST 和 GraphQL，gRPC 的周邊工具和社群資源較少。
 
 ## 常用名詞
 - `Channel`: 客戶端與伺服器之間的連接，負責管理底層的網絡通信。支援多路復用，可以在同一個 Channel 上執行多個請求。 
