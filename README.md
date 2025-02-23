@@ -47,7 +47,7 @@ RPC（Remote Procedure Call，遠端程序呼叫）是一種程式設計概念�
 // TODO
 
 ## 測試方式
-// TODO
+// TODO grpcurl, postman, [grpcui](https://github.com/fullstorydev/grpcui)
 
 ## 生成文件
 // TODO protoc-gen-doc
